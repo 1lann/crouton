@@ -355,6 +355,7 @@ if [ -z "$SYSTEMD" ]; then
   bindmount /tmp /tmp exec
   bindmount /proc
 fi
+bindmount /opt/google/chrome /var/host/chrome
 tmpfsmount /var/run 'noexec,nosuid,mode=0755,size=10%'
 tmpfsmount /var/run/lock 'noexec,nosuid,nodev,size=5120k'
 bindmount /var/run/dbus
